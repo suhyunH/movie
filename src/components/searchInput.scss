@@ -1,0 +1,36 @@
+nav {
+  height: 85px;
+  background-color: #202120;
+}
+.searchContainer {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  // margin-bottom: 50px;
+  justify-content: center;
+  background-color: #202120;
+  .searchInput {
+    display: block;
+    background-color: var(--main-color);
+    width: 60%;
+    height: 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    &:hover {
+      box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+    }
+  }
+  .searchBtn {
+    background: none;
+    border: none;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}

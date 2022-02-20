@@ -1,0 +1,40 @@
+.upcomingContainer {
+  display: flex;
+  overflow: scroll;
+  .upcomingList {
+    width: 300%;
+    margin: 20px 10px;
+    .upcomingInfo {
+      width: 100%;
+      position: relative;
+      background: black;
+      .bgImg {
+        height: 500px;
+        opacity: 0.8;
+      }
+      .upcomingInside {
+        left: 0;
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        display: flex;
+        .poster {
+          border-radius: 5px;
+          box-shadow: 9px 9px 12px -2px #000000;
+        }
+        .upcomingDescription {
+          color: white;
+          width: 60%;
+          margin-left: 40px;
+          h1 {
+            margin-top: 70px;
+          }
+          span {
+            display: block;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

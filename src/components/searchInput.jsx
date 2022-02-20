@@ -1,14 +1,17 @@
+import { Search} from '@material-ui/icons';
 import React, { useState } from 'react'
 import {useNavigate } from 'react-router-dom';
-
+import "./searchInput.scss"
 
 const SearchInput=()=>{
     const navigate = useNavigate();
 
     const [input, setInput]=useState("");
     const onSearch=(ev)=>{
-        ev.preventDefault()
-        navigate('/search',{state:input});
+        ev.preventDefault();
+        if(input){
+            navigate('/search',{state:input});
+        }
     }
     const onInputChange =(ev)=>{
         setInput(ev.target.value);
@@ -19,10 +22,14 @@ const SearchInput=()=>{
           }
     }
 return(
-    <div>
-        <input type="text" onChange={onInputChange} onKeyDown={onKeyDown} placeholder='Search the movie' value={input} />
-         <button onClick={onSearch}>search</button>
-    </div>
+    <nav>
+        <div className='searchContainer'>
+            <input className='searchInput' type="text" onChange={onInputChange} onKeyDown={onKeyDown} placeholder='Search the movie' value={input} required/>
+            <button className='searchBtn' onClick={onSearch}>
+            <Search />
+            </button>
+        </div>
+    </nav>
 )
 }
 
