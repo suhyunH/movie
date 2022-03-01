@@ -1,9 +1,18 @@
 import React,{useState, useEffect} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { apiGet, IMG_BASE } from '../../misc/config';
+import SwiperCore, {Navigation} from "swiper"
 import './upComing.scss'
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+
 
 const UpComing =()=>{
+    SwiperCore.use([Navigation])
+
+ 
     const [upcomingMovies, setUpcomingMovies] = useState([]);
     useEffect(()=>{
         apiGet("movie/upcoming?").then(response=> {
@@ -13,11 +22,21 @@ const UpComing =()=>{
    return(
        <div className='container'>
        <h2 className='title'>What's Coming Next</h2>
+     
+
+
        <div className='upcomingContainer'>
+           <Swiper
+           spaceBetween={0}
+           slidesPerView={1}
+           scrollbar={{ draggable: true }}
+           pagination={{ clickable: true }}
+        navigation={true}
+           >
             {upcomingMovies.slice(undefined,3).map(movie=>
-                <div className='upcomingList' key={movie.id}>
-                    <div className='upcomingInfo'>
-                        <img className="bgImg" src={`${IMG_BASE}original${movie.backdrop_path}`} alt={movie.original_title}/>
+            <SwiperSlide key={movie.id}>
+                <div className='upcomingList' style={{backgroundImage:`url(${IMG_BASE}original${movie.backdrop_path})`}}>
+                    <div className='upcomingInfo'  >
                         <div className='upcomingInside'>
                             <img className='poster' src={`${IMG_BASE}w200${movie.poster_path}`} alt={movie.original_title}/>
                            <div className='upcomingDescription'>
@@ -31,7 +50,9 @@ const UpComing =()=>{
                        </div>
                     </div>
                 </div>
-            )}
+            </SwiperSlide>
+            )} 
+     </Swiper>   
        </div>
        </div>
    )
@@ -39,3 +60,4 @@ const UpComing =()=>{
 }
 
 export default UpComing;
+

@@ -11,7 +11,6 @@ const Popular = ()=>{
         });
         
     },[]);
-    console.log(popularMovies);
     return (
         <div className='container'>
             <h2 className='title'>Popular movies</h2>

@@ -1,24 +1,19 @@
 .upcomingContainer {
   display: flex;
-  overflow: scroll;
+
   .upcomingList {
-    width: 300%;
-    margin: 20px 10px;
+    height: 700px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     .upcomingInfo {
       width: 100%;
       position: relative;
-      background: black;
-      .bgImg {
-        height: 500px;
-        opacity: 0.8;
-      }
+
       .upcomingInside {
-        left: 0;
-        position: absolute;
-        left: 50px;
-        bottom: 100px;
         display: flex;
         .poster {
+          height: 350px;
           border-radius: 5px;
           box-shadow: 9px 9px 12px -2px #000000;
         }

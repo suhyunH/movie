@@ -1,17 +1,22 @@
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 85px;
   background-color: #202120;
+  z-index: 99;
 }
 .searchContainer {
   height: 30px;
   display: flex;
   align-items: center;
   padding-top: 30px;
-  // margin-bottom: 50px;
   justify-content: center;
   background-color: #202120;
   .searchInput {
     display: block;
+    border: 0.2px solid #696969;
     background-color: var(--main-color);
     width: 60%;
     height: 30px;
@@ -20,7 +25,10 @@ nav {
     font-size: 15px;
     color: white;
     &:hover {
-      box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+      box-shadow: 0 0 3pt 0.3pt #696969;
+    }
+    &:focus {
+      outline: none;
     }
   }
   .searchBtn {
