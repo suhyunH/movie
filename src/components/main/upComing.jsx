@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { apiGet, IMG_BASE } from '../../misc/config';
 import SwiperCore, {Navigation} from "swiper"
-import './upComing.scss'
+import Styles from './upComing.module.scss'
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
@@ -20,31 +20,27 @@ const UpComing =()=>{
         });
     },[]);
    return(
-       <div className='container'>
-       <h2 className='title'>What's Coming Next</h2>
-     
-
-
-       <div className='upcomingContainer'>
+       <div>     
+       <div className={Styles.upcomingContainer}>
            <Swiper
            spaceBetween={0}
            slidesPerView={1}
            scrollbar={{ draggable: true }}
            pagination={{ clickable: true }}
-        navigation={true}
+           navigation={true}
            >
             {upcomingMovies.slice(undefined,3).map(movie=>
             <SwiperSlide key={movie.id}>
-                <div className='upcomingList' style={{backgroundImage:`url(${IMG_BASE}original${movie.backdrop_path})`}}>
-                    <div className='upcomingInfo'  >
-                        <div className='upcomingInside'>
-                            <img className='poster' src={`${IMG_BASE}w200${movie.poster_path}`} alt={movie.original_title}/>
-                           <div className='upcomingDescription'>
+                <div className={Styles.upcomingList} style={{backgroundImage:`url(${IMG_BASE}original${movie.backdrop_path})`}}>
+                    <div className={Styles.upcomingInfo}  >
+                        <div className={Styles.upcomingInside}>
+                            <img className={Styles.poster} src={`${IMG_BASE}w200${movie.poster_path}`} alt={movie.original_title}/>
+                           <div className={Styles.upcomingDescription}>
                               <h1>{movie.original_title}</h1>
                                 <span>{movie.overview}</span>
                                 <span>coming out {movie.release_date}</span>
                                 <Link to={`/movie/${movie.id}`}>
-                                     <span>See more</span>
+                                     <button>See more</button>
                                 </Link>
                            </div>
                        </div>

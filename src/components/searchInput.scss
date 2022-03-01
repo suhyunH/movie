@@ -4,7 +4,6 @@ nav {
   left: 0;
   right: 0;
   height: 85px;
-  background-color: #202120;
   z-index: 99;
 }
 .searchContainer {
@@ -13,11 +12,10 @@ nav {
   align-items: center;
   padding-top: 30px;
   justify-content: center;
-  background-color: #202120;
   .searchInput {
     display: block;
     border: 0.2px solid #696969;
-    background-color: var(--main-color);
+    background-color: black;
     width: 60%;
     height: 30px;
     border-radius: 12px;
