@@ -1,0 +1,26 @@
+.nav {
+  position: fixed;
+  top: 0;
+  height: 85px;
+  z-index: 99;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  transition: background-color 0.5s ease-in-out;
+  &.scrolled {
+    background-color: black;
+  }
+  .nav_left {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: medium;
+    margin-left: 20px;
+  }
+  .nav_right {
+    display: flex;
+  }
+}

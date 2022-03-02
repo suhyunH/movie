@@ -1,0 +1,14 @@
+.hearted_btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 30px 20px 0 0;
+  justify-content: center;
+  color: #e50914;
+
+  &:hover {
+    cursor: pointer;
+    color: #b12025;
+  }
+}

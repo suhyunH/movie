@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import SearchInput from '../components/searchInput';
+import Nav from '../components/nav';
+import SearchInput from '../components/nav/searchInput';
 import { apiGet, IMG_BASE } from '../misc/config';
 import "./Search.scss"
 
@@ -14,7 +15,7 @@ function Search(){
     },[]);
 return(
     <>
-    <SearchInput />
+    <Nav />
     <div className='container'>
 
     <h2 className='title'>movies</h2>

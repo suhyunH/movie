@@ -1,13 +1,14 @@
 import React from 'react'
 import Popular from '../components/main/popular';
 import UpComing from '../components/main/upComing';
-import SearchInput from '../components/searchInput';
+import Nav from '../components/nav';
+import SearchInput from '../components/nav/searchInput';
 
 function Home(){
 
     return(
         <>
-        <SearchInput/>
+        <Nav/>
         <UpComing />
         <Popular />
         </>

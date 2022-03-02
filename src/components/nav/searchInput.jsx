@@ -1,4 +1,4 @@
-import { Search} from '@material-ui/icons';
+import { FavoriteBorder, Search} from '@material-ui/icons';
 import React, { useState } from 'react'
 import {useNavigate } from 'react-router-dom';
 import "./searchInput.scss"
@@ -22,14 +22,12 @@ const SearchInput=()=>{
           }
     }
 return(
-    <nav>
         <div className='searchContainer'>
             <input className='searchInput' type="text" onChange={onInputChange} onKeyDown={onKeyDown} placeholder='Search the movie' value={input} required/>
             <button className='searchBtn' onClick={onSearch}>
             <Search />
             </button>
-        </div>
-    </nav>
+        </div>    
 )
 }
 

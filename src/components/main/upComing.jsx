@@ -19,6 +19,9 @@ const UpComing =()=>{
             setUpcomingMovies(response.results);
         });
     },[]);
+
+  
+    
    return(
        <div>     
        <div className={Styles.upcomingContainer}>
@@ -26,7 +29,6 @@ const UpComing =()=>{
            spaceBetween={0}
            slidesPerView={1}
            scrollbar={{ draggable: true }}
-           pagination={{ clickable: true }}
            navigation={true}
            >
             {upcomingMovies.slice(undefined,3).map(movie=>

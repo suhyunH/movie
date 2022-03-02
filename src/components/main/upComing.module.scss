@@ -3,7 +3,7 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: gray;
+    color: #292929;
   }
 
   .upcomingList {
@@ -63,6 +63,7 @@
             border: 2px solid white;
             color: white;
             padding: 5px 10px;
+            cursor: pointer;
           }
         }
       }
