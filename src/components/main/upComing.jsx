@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { apiGet, IMG_BASE } from '../../misc/config';
+import { getMovie, IMG_BASE } from '../../misc/config';
 import SwiperCore, {Navigation} from "swiper"
 import Styles from './upComing.module.scss'
 import 'swiper/scss';
@@ -15,12 +15,12 @@ const UpComing =()=>{
  
     const [upcomingMovies, setUpcomingMovies] = useState([]);
     useEffect(()=>{
-        apiGet("movie/upcoming?").then(response=> {
+        getMovie("movie/upcoming?").then(response=> {
             setUpcomingMovies(response.results);
         });
     },[]);
 
-  
+  console.log(upcomingMovies)
     
    return(
        <div>     

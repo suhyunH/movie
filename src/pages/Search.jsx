@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import Nav from '../components/nav';
 import SearchInput from '../components/nav/searchInput';
-import { apiGet, IMG_BASE } from '../misc/config';
+import { apiGet, getMovie, IMG_BASE } from '../misc/config';
 import "./Search.scss"
 
 function Search(){
     const [search, setSearch] = useState([]);
     const {state}= useLocation();
     useEffect(()=>{        
-        apiGet(`search/movie?query=${state}&`).then(response=> {
+        getMovie(`search/movie?query=${state}&`).then(response=> {
             setSearch(response.results);
          });
     },[]);

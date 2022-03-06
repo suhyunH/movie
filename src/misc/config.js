@@ -9,3 +9,10 @@ export async function apiGet(query){
         .then(r =>r.json());
       return response;
 }
+
+export async function getMovie(query){
+  const response = 
+  await fetch (`https://api.themoviedb.org/3/${query}api_key=${API_KEY}&append_to_response=videos,images`)
+  .then(r =>r.json());
+return response;
+}
