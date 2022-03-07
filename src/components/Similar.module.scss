@@ -1,0 +1,23 @@
+.similar_container {
+  width: 80%;
+  margin: 60px auto 40px;
+  color: white;
+  .similar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+
+    .similar_card {
+      img {
+        height: 230px;
+        border-radius: 12px;
+        margin-bottom: 7px;
+      }
+      h3 {
+        color: white;
+      }
+    }
+  }
+}

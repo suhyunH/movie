@@ -11,17 +11,19 @@ import 'swiper/scss/pagination';
 
 const UpComing =()=>{
     SwiperCore.use([Navigation])
-
- 
     const [upcomingMovies, setUpcomingMovies] = useState([]);
-    useEffect(()=>{
-        getMovie("movie/upcoming?").then(response=> {
-            setUpcomingMovies(response.results);
-        });
-    },[]);
 
-  console.log(upcomingMovies)
-    
+    useEffect(()=>{
+        let  isComponentMounted = true;
+        if(isComponentMounted){
+            getMovie("movie/upcoming?").then(response=> {
+                setUpcomingMovies(response.results);
+            });
+        }
+        return()=>{
+            isComponentMounted=false;
+        }
+    },[]);    
    return(
        <div>     
        <div className={Styles.upcomingContainer}>

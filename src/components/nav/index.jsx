@@ -12,13 +12,11 @@ function Nav() {
         return()=>(window.onscroll=null);
         
     }
-    console.log(isScrolled);
   return (
     <div className={isScrolled? "nav scrolled" : "nav"}>
         <div className='nav_left'>
             <Link to="/" style={{color: "white", fontSize:"large", textDecoration:"none"}}>
                 <h3>MovieJoy </h3>
-                {/* <LiveTvRounded /> */}
             </Link>
         </div>
         <div className='nav_right'>

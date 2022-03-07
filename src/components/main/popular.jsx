@@ -17,8 +17,8 @@ const Popular = ()=>{
             <div className='popularContainer'>
                 {popularMovies.map((movie)=> 
                 <div className='popularBox' key={movie.id}>       
-                    <img src={`${IMG_BASE}w200${movie.poster_path}`} alt={movie.original_title}/>
                     <Link to={`/movie/${movie.id}`}  style={{textDecoration:'none'}}>
+                    <img src={`${IMG_BASE}w200${movie.poster_path}`} alt={movie.original_title}/>
                     <h4>{movie.original_title}</h4>
                     </Link>
                 </div>

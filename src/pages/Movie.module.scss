@@ -1,0 +1,77 @@
+.movie_container {
+  color: white;
+  width: 100%;
+  margin: 50px auto;
+  padding-top: 100px;
+  min-width: 680px;
+  h2 {
+    color: gray;
+    font-weight: lighter;
+  }
+  .movie {
+    margin-bottom: 40px;
+    .logo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .youtube {
+      text-align: center;
+      height: 400px;
+      margin-bottom: 40px;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      margin: 20px auto;
+      .poster {
+        margin: auto;
+        img {
+          border-radius: 20px;
+        }
+      }
+      .detail {
+        margin-left: 20px;
+        button {
+          background-color: gray;
+          color: white;
+          border-radius: 20px;
+          pointer-events: none;
+          font-size: 15px;
+          padding: 2px 20px;
+          margin: 10px 5px 10px 0;
+        }
+        h4 {
+          margin: 10px;
+        }
+        span {
+          display: block;
+          margin: 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .cast_container {
+    width: 80%;
+    margin: auto;
+
+    .cast {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 20px;
+      gap: 20px;
+      text-align: center;
+      .cast_card {
+        img {
+          height: 200px;
+          border-radius: 12px;
+          margin-bottom: 7px;
+        }
+        span {
+          color: gray;
+        }
+      }
+    }
+  }
+}
