@@ -13,7 +13,6 @@ function Search(){
             setSearch(response.results);
          });
     },[]);
-    console.log(search);
 return(
     <>
     <Nav />
