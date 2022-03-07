@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { apiGet, IMG_BASE } from '../../misc/config';
 import Styles from './Similar.module.scss'
 export default function Similar() {
     const[similar, setSimilar]=useState([]);
     const {id} = useParams();
+    let location = useLocation();
     useEffect(()=>{
         let  isComponentMounted = true;
         if(isComponentMounted){
@@ -16,13 +17,15 @@ export default function Similar() {
             isComponentMounted=false;
         }
     },[]);
+
+
   return (
     <div className={Styles.similar_container}>
      <h2>Similar movies</h2>
      <div className={Styles.similar}>
         {similar?.map((movie)=>
-        <div key={movie.id} className={Styles.similar_card}>
-            <Link to={`/movie/${movie.id}`}  >
+        <div key={movie.id} className={Styles.similar_card} >
+            <Link to={`/movie/${movie.id}`} style={{textDecoration:"none"}} onClick={()=>{location.reload()}}>
             <img src={`${IMG_BASE}w200${movie.poster_path}`}/>
             <h3>{movie.title}</h3>
             </Link>
