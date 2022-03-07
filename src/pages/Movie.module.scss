@@ -26,6 +26,13 @@
       margin: 20px auto;
       .poster {
         margin: auto;
+        .bookmarkbtn {
+          position: absolute;
+          background-color: transparent;
+          color: red;
+          border: none;
+          cursor: pointer;
+        }
         img {
           border-radius: 20px;
         }
@@ -46,30 +53,8 @@
         }
         span {
           display: block;
-          margin: 10px;
+          margin: 30px 10px 10px 10px;
           width: 100%;
-        }
-      }
-    }
-  }
-  .cast_container {
-    width: 80%;
-    margin: auto;
-
-    .cast {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      padding: 20px;
-      gap: 20px;
-      text-align: center;
-      .cast_card {
-        img {
-          height: 200px;
-          border-radius: 12px;
-          margin-bottom: 7px;
-        }
-        span {
-          color: gray;
         }
       }
     }

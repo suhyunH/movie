@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { apiGet, IMG_BASE } from '../misc/config';
+import { apiGet, IMG_BASE } from '../../misc/config';
 import Styles from './Similar.module.scss'
 export default function Similar() {
     const[similar, setSimilar]=useState([]);

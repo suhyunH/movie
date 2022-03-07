@@ -1,0 +1,22 @@
+.cast_container {
+  width: 80%;
+  margin: auto;
+
+  .cast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+    .cast_card {
+      img {
+        height: 200px;
+        border-radius: 12px;
+        margin-bottom: 7px;
+      }
+      span {
+        color: gray;
+      }
+    }
+  }
+}
