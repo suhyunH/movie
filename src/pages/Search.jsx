@@ -39,7 +39,7 @@ return(
                                 <Favorite />
                                 :
                                 <FavoriteBorder/>
-                            }
+                                }
                                 </button>     
                             <Link to={`/movie/${movie.id}`}  style={{textDecoration:'none'}}>
                             <img src={movie.poster_path?`${IMG_BASE}w200${movie.poster_path}`: null} alt={movie.original_title}/>
