@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import Actor from './pages/Actor';
 import Home from './pages/Home';
 import Liked from './pages/Liked';
@@ -10,7 +10,6 @@ import './app.scss'
 
 function App() {
   return (
-<HashRouter>
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/search" element={<Search/>}/>
@@ -18,7 +17,6 @@ function App() {
             <Route path="/actor/:userId" element={<Actor />}/> 
             <Route path="/liked" element={<Liked />}/> 
           </Routes>
-    </HashRouter>
   );
 }
 
