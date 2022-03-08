@@ -1,6 +1,5 @@
 .upcomingContainer {
   display: flex;
-
   .swiper-button-next,
   .swiper-button-prev {
     color: #292929;
@@ -64,6 +63,10 @@
             color: white;
             padding: 5px 10px;
             cursor: pointer;
+            &:hover {
+              background-color: white;
+              color: black;
+            }
           }
         }
       }
