@@ -1,6 +1,6 @@
-import { FavoriteBorder, Search} from '@material-ui/icons';
+import {  Search} from '@material-ui/icons';
 import React, { useState } from 'react'
-import {useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "./searchInput.scss"
 
 const SearchInput=()=>{

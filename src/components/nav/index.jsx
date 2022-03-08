@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Hearted from './hearted'
 import SearchInput from './searchInput'
 import  './index.scss'
-import { LiveTvRounded } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 function Nav() {
 

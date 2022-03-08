@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import Nav from '../components/nav';
-import { apiGet, getMovie, IMG_BASE } from '../misc/config';
+import { getMovie, IMG_BASE } from '../misc/config';
 import YouTube from 'react-youtube';
 import Styles from'./Movie.module.scss'
 import Similar from '../components/movie/Similar';
