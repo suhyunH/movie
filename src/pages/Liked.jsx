@@ -27,7 +27,7 @@ function Liked(){
             setIsLoading(false);
         }
     },[])
-    console.log(movies);
+
    return(
     <>
     <Nav />

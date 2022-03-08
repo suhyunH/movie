@@ -43,7 +43,7 @@ const UpComing =()=>{
                               <h1>{movie.original_title}</h1>
                                 <span>{movie.overview}</span>
                                 <span>coming out {movie.release_date}</span>
-                                <Link to={`/movie/${movie.id}`}>
+                                <Link to={`/${movie.id}`}>
                                      <button>See more</button>
                                 </Link>
                            </div>

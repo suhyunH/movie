@@ -14,7 +14,7 @@ function Search(){
         getMovie(`search/movie?query=${state}&`).then(response=> {
             setSearch(response.results);
          });
-    },[])
+    },[state])
     
 return(
     <>
@@ -41,7 +41,7 @@ return(
                                 <FavoriteBorder/>
                                 }
                                 </button>     
-                            <Link to={`/movie/${movie.id}`}  style={{textDecoration:'none'}}>
+                            <Link to={`/${movie.id}`}  style={{textDecoration:'none'}}>
                             <img src={movie.poster_path?`${IMG_BASE}w200${movie.poster_path}`: null} alt={movie.original_title}/>
                             <h4>{movie.original_title}</h4>
                             </Link>

@@ -16,7 +16,7 @@ function Cast() {
         return ()=>{
             isComponentMounted=false;
         }
-    },[]);
+    },[id]);
   return (
          <div className={Styles.cast_container}>
             <h2>Cast</h2>

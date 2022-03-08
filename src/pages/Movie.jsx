@@ -17,7 +17,7 @@ function Movie(){
     useEffect(()=>{
         getMovie(`movie/${id}?`).then(response=>
                 setMovieDetail([response]));
-    },[]);
+    },[id]);
 
  
 

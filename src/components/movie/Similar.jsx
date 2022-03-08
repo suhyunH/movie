@@ -16,7 +16,7 @@ export default function Similar() {
         return ()=>{
             isComponentMounted=false;
         }
-    },[]);
+    },[id]);
 
 
   return (
@@ -24,8 +24,8 @@ export default function Similar() {
      <h2>Similar movies</h2>
      <div className={Styles.similar}>
         {similar?.map((movie)=>
-        <div key={movie.id} className={Styles.similar_card} >
-            <Link to={`/movie/${movie.id}`} style={{textDecoration:"none"}} onClick={()=>{location.reload()}}>
+        <div key={movie.id} className={Styles.similar_card}>
+            <Link to={`/${movie.id}`} style={{textDecoration:"none"}}  >
             <img src={`${IMG_BASE}w200${movie.poster_path}`}/>
             <h3>{movie.title}</h3>
             </Link>

@@ -36,7 +36,7 @@ const Popular = ()=>{
                                 <FavoriteBorder/>
                                 }
                                 </button>     
-                            <Link to={`/movie/${movie.id}`}  style={{textDecoration:'none'}}>
+                            <Link to={`/${movie.id}`}  style={{textDecoration:'none'}}>
                             <img src={`${IMG_BASE}w200${movie.poster_path}`} alt={movie.original_title}/>
                             <h4>{movie.original_title}</h4>
                             </Link>
