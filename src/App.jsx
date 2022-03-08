@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Actor from './pages/Actor';
 import Home from './pages/Home';
 import Liked from './pages/Liked';
