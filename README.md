@@ -1,5 +1,6 @@
 #MovieJoy
 # movie searching site using React, React Router v6, SCSS, and TheMovieDB API
+# https://suhyunh.github.io/movie_joy/
 
 
 #main page
